@@ -3,13 +3,8 @@ require_once '../../config/database.php';
 require_once '../../model/todo.php';
 require_once '../../controller/TodoController.php';
 
-if($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = new TodoController;
-    $action->edit();
-} else {
-    $action = new TodoController;
-    $todo = $atcion->edit();
-}
+$action = new TodoController;
+$todo = $atcion->edit();
 
 session_start();
 // セッション情報の取得
